@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="spring-mvc" />
+        <module name="spring-ssm" />
+        <module name="mybatis-hi" />
+        <module name="mybatis-ni" />
+        <module name="spring-001" />
+        <module name="spring-mvc-extension" />
+        <module name="mybatis-DongSQL" />
+        <module name="spring-aop" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="mybatis-DongSQL" target="8" />
+      <module name="mybatis-hi" target="8" />
+      <module name="mybatis-ni" target="8" />
+      <module name="sping-mvc-extension" target="8" />
+      <module name="spring-001" target="8" />
+      <module name="spring-aop" target="8" />
+      <module name="spring-listener" target="8" />
+      <module name="spring-mvc" target="8" />
+      <module name="spring-mvc-extension" target="8" />
+      <module name="spring-ssm" target="1.5" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

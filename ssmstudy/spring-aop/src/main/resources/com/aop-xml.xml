@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd http://www.springframework.org/schema/aop https://www.springframework.org/schema/aop/spring-aop.xsd">
+
+    <context:component-scan base-package="com.spring.proxy"></context:component-scan>
+    <aop:config>
+        <!--配置切面类-->
+        <aop:aspect ref="loggerAspect">
+            <aop:pointcut id="pointCut" expression="execution(*com.spring.proxy.CalculatorImpl.*(..))"/>
+            <aop:before method="beforeAdvice" pointcut-ref="pointCut"></aop:before>
+            <aop:after method="afterAdvice" pointcut-ref="pointCut"></aop:after>
+            <aop:after-throwing method="afterThrowingMethod" throwing="ex" pointcut-ref="pointCut"></aop:after-throwing>
+        <aop:around method="aroundMethod" pointcut-ref="pointCut"></aop:around>
+    </aop:aspect>
+
+</aop:config>
+</beans>

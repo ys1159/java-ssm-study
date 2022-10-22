@@ -1,0 +1,11 @@
+# 项目排除路径
+/interface-api/target/
+/ssmstudy/mybatis-DongSQL/target/
+/ssmstudy/mybatis-hi/target/
+/ssmstudy/mybatis-ni/target/
+/ssmstudy/spring-001/target/
+/ssmstudy/spring-aop/target/
+/ssmstudy/spring-mvc/target/
+/ssmstudy/spring-mvc-extension/target/
+/ssmstudy/spring-ssm/target/
+/testDay01/target/

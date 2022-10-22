@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/consumer/consumer.iml" filepath="$PROJECT_DIR$/consumer/consumer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Demo2/demo2.iml" filepath="$PROJECT_DIR$/Demo2/demo2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/bootDemo/demo2 (1).iml" filepath="$PROJECT_DIR$/bootDemo/demo2 (1).iml" />
+      <module fileurl="file://$PROJECT_DIR$/interface-api/interface-api.iml" filepath="$PROJECT_DIR$/interface-api/interface-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/javassm.iml" filepath="$PROJECT_DIR$/.idea/javassm.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ssmstudy/mybatis-DongSQL/mybatis-DongSQL.iml" filepath="$PROJECT_DIR$/ssmstudy/mybatis-DongSQL/mybatis-DongSQL.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ssmstudy/mybatis-hi/mybatis-hi.iml" filepath="$PROJECT_DIR$/ssmstudy/mybatis-hi/mybatis-hi.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ssmstudy/mybatis-ni/mybatis-ni.iml" filepath="$PROJECT_DIR$/ssmstudy/mybatis-ni/mybatis-ni.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mybatisni/mybatisni.iml" filepath="$PROJECT_DIR$/mybatisni/mybatisni.iml" />
+      <module fileurl="file://$PROJECT_DIR$/service-provider/service-provider.iml" filepath="$PROJECT_DIR$/service-provider/service-provider.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ssmstudy/spring-001/spring-001.iml" filepath="$PROJECT_DIR$/ssmstudy/spring-001/spring-001.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ssmstudy/spring-aop/spring-aop.iml" filepath="$PROJECT_DIR$/ssmstudy/spring-aop/spring-aop.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ssmstudy/spring-mvc/spring-mvc.iml" filepath="$PROJECT_DIR$/ssmstudy/spring-mvc/spring-mvc.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ssmstudy/spring-mvc-extension/spring-mvc-extension.iml" filepath="$PROJECT_DIR$/ssmstudy/spring-mvc-extension/spring-mvc-extension.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ssmstudy/spring-ssm/spring-ssm.iml" filepath="$PROJECT_DIR$/ssmstudy/spring-ssm/spring-ssm.iml" />
+      <module fileurl="file://$PROJECT_DIR$/testDay01/testDay01.iml" filepath="$PROJECT_DIR$/testDay01/testDay01.iml" />
+    </modules>
+  </component>
+</project>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/mybatis-DongSQL/mybatis-DongSQL.iml" filepath="$PROJECT_DIR$/mybatis-DongSQL/mybatis-DongSQL.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mybatis-hi/mybatis-hi.iml" filepath="$PROJECT_DIR$/mybatis-hi/mybatis-hi.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mybatis-ni/mybatis-ni.iml" filepath="$PROJECT_DIR$/mybatis-ni/mybatis-ni.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-001/spring-001.iml" filepath="$PROJECT_DIR$/spring-001/spring-001.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-aop/spring-aop.iml" filepath="$PROJECT_DIR$/spring-aop/spring-aop.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-mvc/spring-mvc.iml" filepath="$PROJECT_DIR$/spring-mvc/spring-mvc.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-mvc-extension/spring-mvc-extension.iml" filepath="$PROJECT_DIR$/spring-mvc-extension/spring-mvc-extension.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-ssm/spring-ssm.iml" filepath="$PROJECT_DIR$/spring-ssm/spring-ssm.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/ssmstudy.iml" filepath="$PROJECT_DIR$/.idea/ssmstudy.iml" />
+    </modules>
+  </component>
+</project>

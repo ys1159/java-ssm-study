@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.demo2.dao.StudentMapper">
+  <resultMap id="BaseResultMap" type="com.demo2.model.Student">
+    <result column="id" jdbcType="INTEGER" property="id" />
+    <result column="name" jdbcType="VARCHAR" property="name" />
+    <result column="age" jdbcType="INTEGER" property="age" />
+  </resultMap>
+  <insert id="insert" parameterType="com.demo2.model.Student">
+    insert into student (id, name, age
+      )
+    values (#{id,jdbcType=INTEGER}, #{name,jdbcType=VARCHAR}, #{age,jdbcType=INTEGER}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.demo2.model.Student">
+    insert into student
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="name != null">
+        name,
+      </if>
+      <if test="age != null">
+        age,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="name != null">
+        #{name,jdbcType=VARCHAR},
+      </if>
+      <if test="age != null">
+        #{age,jdbcType=INTEGER},
+      </if>
+    </trim>
+  </insert>
+  <resultMap id="BaseResultMap" type="com.demo2.model.Student">
+    <id column="sid" jdbcType="VARCHAR" property="sid" />
+    <result column="class_id" jdbcType="VARCHAR" property="classId" />
+    <result column="sname" jdbcType="VARCHAR" property="sname" />
+    <result column="snumber" jdbcType="VARCHAR" property="snumber" />
+    <result column="sage" jdbcType="INTEGER" property="sage" />
+    <result column="ssex" jdbcType="VARCHAR" property="ssex" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    sid, class_id, sname, snumber, sage, ssex
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from student
+    where sid = #{sid,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+    delete from student
+    where sid = #{sid,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="com.demo2.model.Student">
+    insert into student (sid, class_id, sname, 
+      snumber, sage, ssex
+      )
+    values (#{sid,jdbcType=VARCHAR}, #{classId,jdbcType=VARCHAR}, #{sname,jdbcType=VARCHAR}, 
+      #{snumber,jdbcType=VARCHAR}, #{sage,jdbcType=INTEGER}, #{ssex,jdbcType=VARCHAR}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.demo2.model.Student">
+    insert into student
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="sid != null">
+        sid,
+      </if>
+      <if test="classId != null">
+        class_id,
+      </if>
+      <if test="sname != null">
+        sname,
+      </if>
+      <if test="snumber != null">
+        snumber,
+      </if>
+      <if test="sage != null">
+        sage,
+      </if>
+      <if test="ssex != null">
+        ssex,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="sid != null">
+        #{sid,jdbcType=VARCHAR},
+      </if>
+      <if test="classId != null">
+        #{classId,jdbcType=VARCHAR},
+      </if>
+      <if test="sname != null">
+        #{sname,jdbcType=VARCHAR},
+      </if>
+      <if test="snumber != null">
+        #{snumber,jdbcType=VARCHAR},
+      </if>
+      <if test="sage != null">
+        #{sage,jdbcType=INTEGER},
+      </if>
+      <if test="ssex != null">
+        #{ssex,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.demo2.model.Student">
+    update student
+    <set>
+      <if test="classId != null">
+        class_id = #{classId,jdbcType=VARCHAR},
+      </if>
+      <if test="sname != null">
+        sname = #{sname,jdbcType=VARCHAR},
+      </if>
+      <if test="snumber != null">
+        snumber = #{snumber,jdbcType=VARCHAR},
+      </if>
+      <if test="sage != null">
+        sage = #{sage,jdbcType=INTEGER},
+      </if>
+      <if test="ssex != null">
+        ssex = #{ssex,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where sid = #{sid,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.demo2.model.Student">
+    update student
+    set class_id = #{classId,jdbcType=VARCHAR},
+      sname = #{sname,jdbcType=VARCHAR},
+      snumber = #{snumber,jdbcType=VARCHAR},
+      sage = #{sage,jdbcType=INTEGER},
+      ssex = #{ssex,jdbcType=VARCHAR}
+    where sid = #{sid,jdbcType=VARCHAR}
+  </update>
+  <resultMap id="BaseResultMap" type="com.demo2.model.Student">
+    <result column="id" jdbcType="INTEGER" property="id" />
+    <result column="name" jdbcType="VARCHAR" property="name" />
+    <result column="age" jdbcType="INTEGER" property="age" />
+  </resultMap>
+  <insert id="insert" parameterType="com.demo2.model.Student">
+    insert into student (id, name, age
+      )
+    values (#{id,jdbcType=INTEGER}, #{name,jdbcType=VARCHAR}, #{age,jdbcType=INTEGER}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.demo2.model.Student">
+    insert into student
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="name != null">
+        name,
+      </if>
+      <if test="age != null">
+        age,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="name != null">
+        #{name,jdbcType=VARCHAR},
+      </if>
+      <if test="age != null">
+        #{age,jdbcType=INTEGER},
+      </if>
+    </trim>
+  </insert>
+  <resultMap id="BaseResultMap" type="com.demo2.model.Student">
+    <id column="sid" jdbcType="VARCHAR" property="sid" />
+    <result column="class_id" jdbcType="VARCHAR" property="classId" />
+    <result column="sname" jdbcType="VARCHAR" property="sname" />
+    <result column="snumber" jdbcType="VARCHAR" property="snumber" />
+    <result column="sage" jdbcType="INTEGER" property="sage" />
+    <result column="ssex" jdbcType="VARCHAR" property="ssex" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    sid, class_id, sname, snumber, sage, ssex
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from student
+    where sid = #{sid,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+    delete from student
+    where sid = #{sid,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="com.demo2.model.Student">
+    insert into student (sid, class_id, sname, 
+      snumber, sage, ssex
+      )
+    values (#{sid,jdbcType=VARCHAR}, #{classId,jdbcType=VARCHAR}, #{sname,jdbcType=VARCHAR}, 
+      #{snumber,jdbcType=VARCHAR}, #{sage,jdbcType=INTEGER}, #{ssex,jdbcType=VARCHAR}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.demo2.model.Student">
+    insert into student
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="sid != null">
+        sid,
+      </if>
+      <if test="classId != null">
+        class_id,
+      </if>
+      <if test="sname != null">
+        sname,
+      </if>
+      <if test="snumber != null">
+        snumber,
+      </if>
+      <if test="sage != null">
+        sage,
+      </if>
+      <if test="ssex != null">
+        ssex,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="sid != null">
+        #{sid,jdbcType=VARCHAR},
+      </if>
+      <if test="classId != null">
+        #{classId,jdbcType=VARCHAR},
+      </if>
+      <if test="sname != null">
+        #{sname,jdbcType=VARCHAR},
+      </if>
+      <if test="snumber != null">
+        #{snumber,jdbcType=VARCHAR},
+      </if>
+      <if test="sage != null">
+        #{sage,jdbcType=INTEGER},
+      </if>
+      <if test="ssex != null">
+        #{ssex,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.demo2.model.Student">
+    update student
+    <set>
+      <if test="classId != null">
+        class_id = #{classId,jdbcType=VARCHAR},
+      </if>
+      <if test="sname != null">
+        sname = #{sname,jdbcType=VARCHAR},
+      </if>
+      <if test="snumber != null">
+        snumber = #{snumber,jdbcType=VARCHAR},
+      </if>
+      <if test="sage != null">
+        sage = #{sage,jdbcType=INTEGER},
+      </if>
+      <if test="ssex != null">
+        ssex = #{ssex,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where sid = #{sid,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.demo2.model.Student">
+    update student
+    set class_id = #{classId,jdbcType=VARCHAR},
+      sname = #{sname,jdbcType=VARCHAR},
+      snumber = #{snumber,jdbcType=VARCHAR},
+      sage = #{sage,jdbcType=INTEGER},
+      ssex = #{ssex,jdbcType=VARCHAR}
+    where sid = #{sid,jdbcType=VARCHAR}
+  </update>
+</mapper>

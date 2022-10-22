@@ -1,0 +1,91 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:util="http://www.springframework.org/schema/util"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/util https://www.springframework.org/schema/util/spring-util.xsd">
+    <!--
+            bean：配置一个bean对象，将对象交给IOC容器管理
+            属性：
+            id：bean的唯一标识，不能重复
+            class：设置bean对象所对应的类型
+         -->
+    <bean id="helloworld" class="com.spring.bean.HelloWorld">
+        <!--        <property name="id">-->
+        <!--            &lt;!&ndash; 解决方案二：使用CDATA节 &ndash;&gt;-->
+        <!--            &lt;!&ndash; CDATA中的C代表Character，是文本、字符的含义，CDATA就表示纯文本数据 &ndash;&gt;-->
+        <!--            &lt;!&ndash; XML解析器看到CDATA节就知道这里是纯文本，就不会当作XML标签或属性来解析 &ndash;&gt;-->
+        <!--            &lt;!&ndash; 所以CDATA节中写什么符号都随意 &ndash;&gt;-->
+        <!--            <value><![CDATA[a < b]]></value>-->
+        <!--        </property>-->
+    </bean>
+    <bean id="studentone" class="com.spring.bean.Student">
+        <property name="sid" value="1001"></property>
+        <property name="sname" value="ys"></property>
+        <property name="age" value="29"></property>
+        <property name="gender" value="男"></property>
+        <property name="score" value="100"></property>
+        <!--        <property name="clazz" ref="clazzone"></property>-->
+        <property name="clazz">
+            <bean id="clazzInner" class="com.spring.bean.Clazz">
+                <property name="cid" value="14"></property>
+                <property name="cname" value="好班"></property>
+            </bean>
+        </property>
+        <property name="hobby">
+            <array>
+                <value>黄</value>
+                <value>赌</value>
+                <value>毒</value>
+            </array>
+        </property>
+        <!--        <property name="teacherMap">-->
+        <!--            <map>-->
+        <!--                <entry key="10011" value-ref="teacherone">-->
+        <!--                </entry>-->
+        <!--                <entry key="10086" value-ref="teachertwo"></entry>-->
+        <!--            </map>-->
+        <!--        </property>-->
+        <property name="teacherMap" ref="studentmap"></property>
+
+    </bean>
+    <bean id="studenttwo" class="com.spring.bean.Student">
+
+    </bean>
+    <bean id="clazzone" class="com.spring.bean.Clazz">
+        <property name="cid" value="14"></property>
+        <property name="cname" value="好班"></property>
+        <!--        <property name="students">-->
+        <!--            <list>-->
+        <!--                <ref bean="studentone"></ref>-->
+        <!--                <ref bean="studenttwo"></ref>-->
+        <!--            </list>-->
+        <!--        </property>-->
+        <property name="students" ref="studentlist"></property>
+
+    </bean>
+    <bean id="teacherone" class="com.spring.bean.Teacher">
+        <property name="tid" value="001"></property>
+        <property name="tname" value="大宝"></property>
+    </bean>
+    <bean id="teachertwo" class="com.spring.bean.Teacher">
+        <property name="tid" value="002"></property>
+        <property name="tname" value="小宝"></property>
+    </bean>
+
+    <util:list id="studentlist">
+
+        <ref bean="studentone"></ref>
+        <ref bean="studenttwo"></ref>
+    </util:list>
+    <util:map id="studentmap">
+        <entry key="10011" value-ref="teachertwo"></entry>
+        <entry key="10086" value-ref="teacherone"></entry>
+    </util:map>
+
+    <bean id="studentsss" class="com.spring.bean.Student" p:sid="1005"
+          p:sname="ys" p:age="20" p:clazz-ref="clazzone"
+          p:gender="男" p:teacherMap-ref="studentmap">
+
+    </bean>
+
+
+</beans>

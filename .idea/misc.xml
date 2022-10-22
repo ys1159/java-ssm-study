@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="FrameworkDetectionExcludesConfiguration">
+    <file type="web" url="file://$PROJECT_DIR$/ssmstudy/spring-mvc" />
+    <file type="web" url="file://$PROJECT_DIR$/ssmstudy/spring-mvc-extension" />
+    <file type="web" url="file://$PROJECT_DIR$/ssmstudy/spring-ssm" />
+    <file type="web" url="file://$PROJECT_DIR$/testDay01" />
+  </component>
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/Demo2/pom.xml" />
+        <option value="$PROJECT_DIR$/bootDemo/pom.xml" />
+        <option value="$PROJECT_DIR$/consumer/pom.xml" />
+        <option value="$PROJECT_DIR$/ssmstudy/mybatis-hi/pom.xml" />
+        <option value="$PROJECT_DIR$/ssmstudy/mybatis-ni/pom.xml" />
+        <option value="$PROJECT_DIR$/ssmstudy/spring-001/pom.xml" />
+        <option value="$PROJECT_DIR$/ssmstudy/spring-aop/pom.xml" />
+        <option value="$PROJECT_DIR$/ssmstudy/spring-mvc/pom.xml" />
+        <option value="$PROJECT_DIR$/ssmstudy/spring-ssm/pom.xml" />
+        <option value="$PROJECT_DIR$/ssmstudy/mybatis-DongSQL/pom.xml" />
+        <option value="$PROJECT_DIR$/ssmstudy/spring-mvc-extension/pom.xml" />
+        <option value="$PROJECT_DIR$/mybatisni/pom.xml" />
+        <option value="$PROJECT_DIR$/testDay01/pom.xml" />
+        <option value="$PROJECT_DIR$/interface-api/pom.xml" />
+        <option value="$PROJECT_DIR$/service-provider/pom.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" project-jdk-name="1.8" project-jdk-type="JavaSDK" />
+</project>

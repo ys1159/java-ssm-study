@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="mapper.UserMapper">
+    <insert id="insertUser" useGeneratedKeys="true" keyProperty="id">
+        insert into t_user values(null,#{uname},#{pwd},#{age},#{sex},#{email})
+    </insert>
+    <update id="updateUser">
+        update t_user set uname='root',pwd='123' where id=1
+    </update>
+    <delete id="deleteUser">
+        delete from t_user where id=3
+    </delete>
+    <select id="selectUserById" resultType="pojo.TUser">
+        select * from t_user where id=4
+    </select>
+    <select id="selectAll" resultType="pojo.TUser">
+        select * from t_user;
+    </select>
+    <select id="getUserByUsername" resultType="pojo.TUser">
+        select * from t_user where uname=#{uname}
+    </select>
+    <select id="checkLogin" resultType="pojo.TUser">
+        select * from t_user where uname=#{param1} and pwd=#{param2}
+    </select>
+    <select id="checkLoginByParam" resultType="pojo.TUser">
+        select * from t_user where uname=#{uname} and pwd=#{pwd}
+    </select>
+    <select id="getCount" resultType="java.lang.Integer">
+        select count(*) from t_user
+    </select>
+    <select id="getUserByIdMap" resultType="java.util.Map">
+        select * from t_user where id=#{id}
+    </select>
+    <select id="getAllUserToMap" resultType="java.util.Map">
+        select * from t_user
+    </select>
+
+</mapper>
